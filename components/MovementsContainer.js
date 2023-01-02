@@ -3,15 +3,6 @@ import React from "react";
 import MovementItem from "./MovementItem";
 
 const MovementsContainer = ({ products = [], navigation }) => {
-  const productItem = {
-    id: "1",
-    image: "https://picsum.photos/200",
-    product: "Producto 1",
-    createdAt: "2021-05-01",
-    points: 100,
-    is_redemption: false,
-  };
-
   return (
     <View className="flex-1 bg-white my-4 rounded-xl py-6 px-3">
       {products?.length === 0 || products === undefined ? (

@@ -43,7 +43,7 @@ const HomeScreen = ({ navigation }) => {
   useEffect(() => {
     const total = getTotalPoints(productBackup);
     setTotalPoints(total);
-  }, [products]);
+  }, [productBackup]);
 
   if (products.length === 0) {
     return (
@@ -67,7 +67,7 @@ const HomeScreen = ({ navigation }) => {
         </Text>
         <MovementsContainer products={products} navigation={navigation} />
       </View>
-      <View className="basis-[10%] ">
+      <View className="basis-[10%]">
         <Footer
           filterTrue={handleFilterMovementsTrue}
           filterFalse={handleFilterMovementsFalse}
