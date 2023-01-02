@@ -5,6 +5,7 @@ import {
   TouchableWithoutFeedback,
   Image,
   Button,
+  ScrollView,
 } from "react-native";
 import React from "react";
 import { getDate } from "../utils";
@@ -29,46 +30,48 @@ const ProductDetailScreen = ({ route, navigation }) => {
 
   return (
     <SafeAreaView className="flex flex-1 flex-col h-screen bg-[#CFD6FF]">
-      <View className="px-6 mt-10 mb-6">
-        <Text className="font-extrabold text-2xl">{product}</Text>
-      </View>
-      <View className="bg-white h-screen">
-        <View
-          style={{
-            shadowColor: "#000",
-            shadowOpacity: 0.5,
-            shadowOffset: { width: 2, height: 5 },
-          }}
-          className="px-6 mt-10"
-        >
-          <Image source={image} className="w-full h-96 rounded-xl" />
+      <ScrollView>
+        <View className="px-6 mt-12 mb-6">
+          <Text className="font-extrabold text-2xl">{product}</Text>
         </View>
-        <View className="px-6 mt-10">
-          <Text className="text-gray-400 font-bold text-base mb-5">
-            Detalles del producto
-          </Text>
-          <Text className="font-extrabold text-lg mb-5">
-            Comprado el {dateFormated}
-          </Text>
-          <Text className="text-gray-400 font-bold text-base mb-8">
-            Con esta compra acumulaste:
-          </Text>
-          <Text className="font-extrabold text-2xl">{points} puntos</Text>
-        </View>
-        <View className="px-6 mt-10">
-          <View className="absolute top-0 inset-x-6 items-center">
-            <View className=" w-full bg-blue-600 rounded-lg py-4 ">
-              <TouchableWithoutFeedback onPress={() => navigation.goBack()}>
-                <View>
-                  <Text className="text-center test-xs font-extrabold text-white">
-                    Aceptar
-                  </Text>
-                </View>
-              </TouchableWithoutFeedback>
+        <View className="bg-white h-screen ">
+          <View
+            style={{
+              shadowColor: "#000",
+              shadowOpacity: 0.5,
+              shadowOffset: { width: 2, height: 5 },
+            }}
+            className="px-6 mt-10"
+          >
+            <Image source={image} className="w-full h-96 rounded-xl" />
+          </View>
+          <View className="px-6 mt-10">
+            <Text className="text-gray-400 font-bold text-base mb-5">
+              Detalles del producto
+            </Text>
+            <Text className="font-extrabold text-lg mb-5">
+              Comprado el {dateFormated}
+            </Text>
+            <Text className="text-gray-400 font-bold text-base mb-8">
+              Con esta compra acumulaste:
+            </Text>
+            <Text className="font-extrabold text-2xl">{points} puntos</Text>
+          </View>
+          <View className="px-6 my-6 ">
+            <View className="items-center">
+              <View className=" w-full bg-blue-600 rounded-lg py-4 ">
+                <TouchableWithoutFeedback onPress={() => navigation.goBack()}>
+                  <View>
+                    <Text className="text-center test-xs font-extrabold text-white">
+                      Aceptar
+                    </Text>
+                  </View>
+                </TouchableWithoutFeedback>
+              </View>
             </View>
           </View>
         </View>
-      </View>
+      </ScrollView>
     </SafeAreaView>
   );
 };

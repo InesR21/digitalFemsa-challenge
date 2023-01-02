@@ -36,8 +36,12 @@ const MovementItem = ({ productItem, navigation }) => {
           <Image source={image} className="w-full h-full rounded-xl" />
         </View>
         <View className="basis-[50%] px-4 justify-around ">
-          <Text className="font-bold text-sm">{product}</Text>
-          <Text className="text-sm">{dateFormated}</Text>
+          <Text numberOfLines={1} className="font-bold text-sm">
+            {product}
+          </Text>
+          <Text numberOfLines={1} className="text-sm">
+            {dateFormated}
+          </Text>
         </View>
         <View className="basis-[30%] flex-1 flex-row justify-around items-center">
           {isRedemptionIcon}
