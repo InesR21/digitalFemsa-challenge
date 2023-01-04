@@ -40,10 +40,10 @@ Los siguientes elementos son mandatorios para el code challenge:
 ## Imagenes del producto
 
 
-<img width="450" alt="image" src="https://user-images.githubusercontent.com/45639602/210581070-5e54ebe0-9204-4350-ab39-d968de605044.png"> <img width="450" alt="image" src="https://user-images.githubusercontent.com/45639602/210581167-3037255b-b059-4387-93bb-6dabaa3edce3.png">
+<img width="350" alt="image" src="https://user-images.githubusercontent.com/45639602/210581070-5e54ebe0-9204-4350-ab39-d968de605044.png"> <img width="350" alt="image" src="https://user-images.githubusercontent.com/45639602/210581167-3037255b-b059-4387-93bb-6dabaa3edce3.png">
 
 
-<img width="450" alt="image" src="https://user-images.githubusercontent.com/45639602/210581235-2eeb1d25-2d75-47d6-a418-2963b446e556.png"> <img width="450" alt="image" src="https://user-images.githubusercontent.com/45639602/210581312-7a2358e2-0b7f-4875-b4f1-70eeb261dfdb.png">
+<img width="350" alt="image" src="https://user-images.githubusercontent.com/45639602/210581235-2eeb1d25-2d75-47d6-a418-2963b446e556.png"> <img width="350" alt="image" src="https://user-images.githubusercontent.com/45639602/210581312-7a2358e2-0b7f-4875-b4f1-70eeb261dfdb.png">
 
 
 
