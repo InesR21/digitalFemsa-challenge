@@ -36,6 +36,15 @@ Los siguientes elementos son mandatorios para el code challenge:
 
 ¡Listo! 🚀🚀🚀
 
+
+## Imagenes del producto
+
+
+<img width="408" alt="image" src="https://user-images.githubusercontent.com/45639602/210567776-db94a406-6c9b-4e6f-984d-a696e2b856f6.png">  <img width="415" alt="image" src="https://user-images.githubusercontent.com/45639602/210567856-b8093da1-c0e5-497a-9f09-89f63dea0e81.png">
+
+<img width="499" alt="image" src="https://user-images.githubusercontent.com/45639602/210568830-fceacc18-8fc4-40ae-a67c-bb2b651c5c6c.png"> <img width="471" alt="image" src="https://user-images.githubusercontent.com/45639602/210568903-862aa7b2-c605-4b3f-ad18-7d030b29c227.png">
+
+
 ## Autor ✒️
 
 - **Ines Rojas** - _Front End Developer_ - [InesR](https://www.linkedin.com/in/ines-rojasc/)
