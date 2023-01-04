@@ -15,7 +15,9 @@ Los siguientes elementos son mandatorios para el code challenge:
 - Conexión al endpoint
 - Navegación entre pantallas
 - Pruebas unitarias
+
   Los siguientes elementos son deseables:
+
 - Filtro
 - Mantener todos los elementos “pixel perfect”
 - Pruebas unitarias de componente o de integración
