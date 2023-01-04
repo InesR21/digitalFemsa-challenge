@@ -9,6 +9,7 @@ Este es un proyecto hecho para un React Native Challenge de la empresa [Digital 
     [Prototype](https://www.figma.com/proto/AIMJp1Y6Gfv9PmQ8lYmUy8/Code-challenge?node-id=6%3A649&scaling=scale-down&page-id=0%3A1&starting-point-node-id=6%3A649)
 
 **Criterios de aceptación**
+
 Los siguientes elementos son mandatorios para el code challenge:
 
 - Conexión al endpoint
