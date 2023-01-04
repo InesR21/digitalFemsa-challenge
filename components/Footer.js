@@ -8,6 +8,7 @@ const Footer = ({ filterTrue, filterFalse, notFiltered }) => {
       {isFiltered ? (
         <View className="w-full bg-blue-600 rounded-lg py-4 ">
           <TouchableWithoutFeedback
+            testID="button-notFiltered"
             onPress={() => {
               notFiltered();
               setIsFiltered(false);
@@ -26,6 +27,7 @@ const Footer = ({ filterTrue, filterFalse, notFiltered }) => {
         <View className=" flex-row">
           <View className=" w-[48%] mr-[4%]  bg-blue-600 rounded-lg py-4">
             <TouchableWithoutFeedback
+              testID="button-filterFalse"
               onPress={() => {
                 filterFalse();
                 setIsFiltered(true);
@@ -40,6 +42,7 @@ const Footer = ({ filterTrue, filterFalse, notFiltered }) => {
           </View>
           <View className=" w-[48%] bg-blue-600 rounded-lg py-4">
             <TouchableWithoutFeedback
+              testID="button-filterTrue"
               onPress={() => {
                 filterTrue();
                 setIsFiltered(true);

@@ -11,27 +11,21 @@ const MovementsContainer = ({ products = [], navigation }) => {
         </Text>
       ) : null}
       <FlatList
+        testID="flatlist-movements"
         data={products}
         renderItem={({ item }) => {
-          const productItem = {
-            id: item.id,
-            image: { uri: item.image },
-            product: item.product,
-            createdAt: item.createdAt,
-            points: item.points,
-            is_redemption: item.is_redemption,
-          };
           return (
             <View className="h-14 w-full mb-3">
               <MovementItem
+                testID="movement-item"
                 key={item.id + item.createdAt}
-                productItem={productItem}
+                productItem={item}
                 navigation={navigation}
               />
             </View>
           );
         }}
-        keyExtractor={(item) => item.id}
+        keyExtractor={(item) => item.id.toString()}
       />
     </View>
   );

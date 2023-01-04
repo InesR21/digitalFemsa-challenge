@@ -11,21 +11,21 @@ import React from "react";
 import { getDate } from "../utils";
 
 const ProductDetailScreen = ({ route, navigation }) => {
-  if (!route.params) {
+  if (!route || Object.keys(route.params).length === 0) {
     return (
       <SafeAreaView className="flex flex-1 flex-col h-screen bg-[#CFD6FF]">
         <View className="px-6 mt-10 mb-6">
           <Text className="font-extrabold text-2xl">
             No hay datos para mostrar
           </Text>
-          <Button title="Volver" onPress={() => navigation.goBack()} />
+          <Button title="Volver" onPress={() => navigation.navigate("Home")} />
         </View>
       </SafeAreaView>
     );
   }
 
   const { image, product, createdAt, points, is_redemption } =
-    route.params.product;
+    route.params.productItem;
   const dateFormated = getDate(createdAt);
 
   return (
@@ -43,7 +43,11 @@ const ProductDetailScreen = ({ route, navigation }) => {
             }}
             className="px-6 mt-10"
           >
-            <Image source={image} className="w-full h-96 rounded-xl" />
+            <Image
+              source={{ uri: image }}
+              className="w-full h-96 rounded-xl"
+              accessibilityLabel="Image product detail"
+            />
           </View>
           <View className="px-6 mt-10">
             <Text className="text-gray-400 font-bold text-base mb-5">
@@ -60,7 +64,9 @@ const ProductDetailScreen = ({ route, navigation }) => {
           <View className="px-6 my-6 ">
             <View className="items-center">
               <View className=" w-full bg-blue-600 rounded-lg py-4 ">
-                <TouchableWithoutFeedback onPress={() => navigation.goBack()}>
+                <TouchableWithoutFeedback
+                  onPress={() => navigation.navigate("Home")}
+                >
                   <View>
                     <Text className="text-center test-xs font-extrabold text-white">
                       Aceptar

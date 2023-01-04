@@ -7,33 +7,33 @@ import {
   MinusSmallIcon,
 } from "react-native-heroicons/mini";
 
-const MovementItem = ({ productItem, navigation }) => {
+const MovementItem = ({ productItem = {}, navigation }) => {
+  if (!productItem || Object.keys(productItem).length === 0) return null;
   const { image, product, createdAt, points, is_redemption } = productItem;
   const dateFormated = getDate(createdAt);
   const isRedemptionIcon =
     is_redemption === true ? (
-      <MinusSmallIcon size={30} color="red" />
+      <MinusSmallIcon testID="minus-icon" size={30} color="red" />
     ) : (
-      <PlusSmallIcon size={30} color="green" />
+      <PlusSmallIcon testID="plus-icon" size={30} color="green" />
     );
 
   return (
     <TouchableWithoutFeedback
+      testID="movement-item"
       onPress={() =>
         navigation.navigate("ProductDetail", {
-          product: {
-            image,
-            product,
-            createdAt,
-            points,
-            is_redemption,
-          },
+          productItem,
         })
       }
     >
       <View className="flex-1 flex-row justify-between">
         <View className="basis-[20%] items-center justify-center">
-          <Image source={image} className="w-full h-full rounded-xl" />
+          <Image
+            accessibilityLabel="Image product item"
+            source={{ uri: image }}
+            className="w-full h-full rounded-xl"
+          />
         </View>
         <View className="basis-[50%] px-4 justify-around ">
           <Text numberOfLines={1} className="font-bold text-sm">
@@ -46,7 +46,7 @@ const MovementItem = ({ productItem, navigation }) => {
         <View className="basis-[30%] flex-1 flex-row justify-around items-center">
           {isRedemptionIcon}
           <Text className="font-bold text-base">{points}</Text>
-          <ChevronRightIcon size={30} color="#000" />
+          <ChevronRightIcon testID="chevron-icon" size={30} color="#000" />
         </View>
       </View>
     </TouchableWithoutFeedback>
