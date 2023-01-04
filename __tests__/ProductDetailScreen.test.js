@@ -24,7 +24,7 @@ describe("ProductDetailScreen", () => {
     };
     const route = {
       params: {
-        product: {
+        productItem: {
           image: "https://picsum.photos/200",
           product: "Producto",
           createdAt: "2021-09-30T20:00:00.000Z",
