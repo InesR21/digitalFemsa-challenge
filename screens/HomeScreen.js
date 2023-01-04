@@ -5,6 +5,7 @@ import Header from "../components/Header";
 import MovementsContainer from "../components/MovementsContainer";
 import productServise from "../api/product-service";
 import TotalPointsCard from "../components/TotalPointsCard";
+import { globalStyles } from "../utils/GlobalStyle";
 import {
   getTotalPoints,
   getMovementsByis_redemptionTrue,
@@ -50,7 +51,7 @@ const HomeScreen = ({ navigation }) => {
   if (loading) {
     return (
       <SafeAreaView className="flex-1 justify-center items-center text-lg h-screen">
-        <Text>Loading...</Text>
+        <Text style={globalStyles.text}>Loading...</Text>
       </SafeAreaView>
     );
   }
@@ -64,7 +65,10 @@ const HomeScreen = ({ navigation }) => {
         <TotalPointsCard totalPoinst={totalPoints} />
       </View>
       <View className="basis-[55%] px-4">
-        <Text className="text-gray-400 font-bold text-base">
+        <Text
+          style={globalStyles.text}
+          className="text-gray-400 font-extrabold text-base"
+        >
           TUS MOVIMIENTOS
         </Text>
         <MovementsContainer products={products} navigation={navigation} />

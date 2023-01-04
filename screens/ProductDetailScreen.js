@@ -9,13 +9,14 @@ import {
 } from "react-native";
 import React from "react";
 import { getDate } from "../utils";
+import { globalStyles } from "../utils/GlobalStyle";
 
 const ProductDetailScreen = ({ route, navigation }) => {
   if (!route || Object.keys(route.params).length === 0) {
     return (
       <SafeAreaView className="flex flex-1 flex-col h-screen bg-[#CFD6FF]">
         <View className="px-6 mt-10 mb-6">
-          <Text className="font-extrabold text-2xl">
+          <Text style={globalStyles.text} className="font-extrabold text-2xl">
             No hay datos para mostrar
           </Text>
           <Button title="Volver" onPress={() => navigation.navigate("Home")} />
@@ -32,7 +33,9 @@ const ProductDetailScreen = ({ route, navigation }) => {
     <SafeAreaView className="flex flex-1 flex-col h-screen bg-[#CFD6FF]">
       <ScrollView>
         <View className="px-6 mt-12 mb-6">
-          <Text className="font-extrabold text-2xl">{product}</Text>
+          <Text style={globalStyles.text} className="font-extrabold text-2xl">
+            {product}
+          </Text>
         </View>
         <View className="bg-white h-screen ">
           <View
@@ -50,16 +53,27 @@ const ProductDetailScreen = ({ route, navigation }) => {
             />
           </View>
           <View className="px-6 mt-10">
-            <Text className="text-gray-400 font-bold text-base mb-5">
+            <Text
+              style={globalStyles.text}
+              className="text-gray-400 font-bold text-base mb-5"
+            >
               Detalles del producto
             </Text>
-            <Text className="font-extrabold text-lg mb-5">
+            <Text
+              style={globalStyles.text}
+              className="font-extrabold text-lg mb-5"
+            >
               Comprado el {dateFormated}
             </Text>
-            <Text className="text-gray-400 font-bold text-base mb-8">
+            <Text
+              style={globalStyles.text}
+              className="text-gray-400 font-bold text-base mb-8"
+            >
               Con esta compra acumulaste:
             </Text>
-            <Text className="font-extrabold text-2xl">{points} puntos</Text>
+            <Text style={globalStyles.text} className="font-extrabold text-2xl">
+              {points} puntos
+            </Text>
           </View>
           <View className="px-6 my-6 ">
             <View className="items-center">
@@ -68,7 +82,10 @@ const ProductDetailScreen = ({ route, navigation }) => {
                   onPress={() => navigation.navigate("Home")}
                 >
                   <View>
-                    <Text className="text-center test-xs font-extrabold text-white">
+                    <Text
+                      style={globalStyles.text}
+                      className="text-center text-base font-extrabold text-white"
+                    >
                       Aceptar
                     </Text>
                   </View>

@@ -1,5 +1,6 @@
 import { View, Text, TouchableWithoutFeedback } from "react-native";
 import React, { useState } from "react";
+import { globalStyles } from "../utils/GlobalStyle";
 
 const Footer = ({ filterTrue, filterFalse, notFiltered }) => {
   const [isFiltered, setIsFiltered] = useState(false);
@@ -15,7 +16,10 @@ const Footer = ({ filterTrue, filterFalse, notFiltered }) => {
             }}
           >
             <View>
-              <Text className="text-center test-xs font-extrabold text-white">
+              <Text
+                style={globalStyles.text}
+                className="text-center test-xs font-extrabold text-white"
+              >
                 Todos
               </Text>
             </View>
@@ -34,7 +38,10 @@ const Footer = ({ filterTrue, filterFalse, notFiltered }) => {
               }}
             >
               <View>
-                <Text className="text-center test-xs font-extrabold text-white">
+                <Text
+                  style={globalStyles.text}
+                  className="text-center test-xs font-extrabold text-white"
+                >
                   Ganados
                 </Text>
               </View>
@@ -49,7 +56,10 @@ const Footer = ({ filterTrue, filterFalse, notFiltered }) => {
               }}
             >
               <View>
-                <Text className="text-center test-xs font-extrabold text-white">
+                <Text
+                  style={globalStyles.text}
+                  className="text-center test-xs font-extrabold text-white"
+                >
                   Canjeados
                 </Text>
               </View>

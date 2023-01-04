@@ -1,12 +1,16 @@
 import { View, FlatList, Text, TouchableWithoutFeedback } from "react-native";
 import React from "react";
 import MovementItem from "./MovementItem";
+import { globalStyles } from "../utils/GlobalStyle";
 
 const MovementsContainer = ({ products = [], navigation }) => {
   return (
     <View className="flex-1 bg-white my-4 rounded-xl py-6 px-3">
       {products?.length === 0 || products === undefined ? (
-        <Text className="text-gray-400 font-extrabold text-base">
+        <Text
+          style={globalStyles.text}
+          className="text-gray-400 font-extrabold text-base"
+        >
           No hay movimientos
         </Text>
       ) : null}
