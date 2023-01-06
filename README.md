@@ -51,4 +51,4 @@ Los siguientes elementos son mandatorios para el code challenge:
 
 ## Autor ✒️
 
-- **Ines Rojas** - _Front End Developer_ - [InesR](https://www.linkedin.com/in/ines-rojasc/)
+- **Ines Rojas** - _Front End Developer_ - [InesR](https://inesrojas.com/)
